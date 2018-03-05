@@ -49,11 +49,26 @@ export default {
     },
 
     loadNextPage () {
+      let uri = window.location.search.substring(1);
+      let params = new URLSearchParams(uri);
+
       this.currentPage++
-      return axios.get('/posts.json?page=' + this.currentPage)
+      return axios.get('/posts.json', {
+        params: {
+          page: this.currentPage,
+          q: params.get('q')
+        }
+      })
     },
 
     infiniteHandler ($state) {
+      if (this.posts.length < 25) {
+        // There is no next page
+        $state.loaded()
+        $state.complete()
+        return;
+      }
+
       this.loadNextPage().then(response => {
         if (response.data.length > 0) {
           this.posts.push(...response.data)

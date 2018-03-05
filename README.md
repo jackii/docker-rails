@@ -14,7 +14,7 @@ Simple Rails 5.2 application to demonstrate using Docker for production deployme
 
 - Auto refresh via [ActionCable](https://github.com/rails/rails/tree/master/actioncable): If a displayed post gets changed by another user/instance, it refreshes automatically using the publish/subscribe pattern
 - Full text search via [Elasticsearch](https://www.elastic.co/products/elasticsearch) and the [Searchkick](https://github.com/ankane/searchkick) gem to find post content (with suggestions)
-- Autocompletion with [corejs-typeahead](https://github.com/corejavascript/typeahead.js)
+- Autocompletion with [vue-instant](https://github.com/santiblanko/vue-instant)
 - PDF export with [wkhtmltopdf](http://wkhtmltopdf.org/) and the [WickedPDF](https://github.com/mileszs/wicked_pdf) gem
 - Editing HTML content with the WYSIWYG JavaScript editor [Trix](https://github.com/basecamp/trix)
 - Uploading images directly to S3 with the [Shrine](https://github.com/janko-m/shrine) gem and [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload)
