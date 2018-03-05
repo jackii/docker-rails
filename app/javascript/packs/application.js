@@ -6,6 +6,7 @@ import TurbolinksAdapter from 'vue-turbolinks';
 import VueTimeago from 'vue-timeago';
 import VueSilentbox from 'vue-silentbox';
 import { TrixVue } from 'trix-vue2';
+import PostListing from 'components/PostListing';
 
 Vue.use(TurbolinksAdapter);
 Vue.use(VueTimeago, {
@@ -21,7 +22,7 @@ document.addEventListener('turbolinks:load', () => {
   new Vue({
     el: '#main',
     components: {
-      TrixVue,
+      TrixVue, PostListing
     }
   });
 });

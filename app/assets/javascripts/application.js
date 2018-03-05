@@ -29,7 +29,6 @@
 
 $(document).on('turbolinks:load', function() {
   new TooltipEnabler();
-  new InfiniteScrolling();
   new AhoyTracker();
   new PiwikAnalytics();
 });

@@ -42,7 +42,7 @@ describe "Posts", type: :request do
           expect(response).to have_http_status(200)
           expect(response.content_type).to eq('text/html')
           expect(response.body).to include('Foo')
-          expect(response.body).to include('<em>Lorem</em> ipsum')
+          expect(response.body).to match(/Lorem.*ipsum/)
         end
       end
 
