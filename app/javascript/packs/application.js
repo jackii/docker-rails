@@ -1,14 +1,25 @@
 /* eslint no-console:0 */
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-//
-// To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
-// layout file, like app/views/layouts/application.html.erb
+console.log('Hello World from Webpacker');
 
-console.log('Hello World from Webpacker')
-// Support component names relative to this directory:
-var componentRequireContext = require.context("components", true)
-var ReactRailsUJS = require("react_ujs")
-ReactRailsUJS.useContext(componentRequireContext)
+import Vue from 'vue';
+import TurbolinksAdapter from 'vue-turbolinks';
+import VueTimeago from 'vue-timeago';
+import VueSilentbox from 'vue-silentbox';
+
+Vue.use(TurbolinksAdapter);
+Vue.use(VueTimeago, {
+  name: 'timeago',
+  locale: 'en-US',
+  locales: {
+    'en-US': require('vue-timeago/locales/en-US.json')
+  }
+});
+Vue.use(VueSilentbox);
+
+Vue.config.ignoredElements = ['trix-editor'];
+
+document.addEventListener('turbolinks:load', () => {
+  new Vue({
+    el: '#main',
+  });
+});

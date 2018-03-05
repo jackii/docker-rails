@@ -3,20 +3,19 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.2",
-    "babel-preset-react": "^6.24.1",
     "blueimp-file-upload": "^9.21.0",
     "coffeescript": "^2.2.2",
     "corejs-typeahead": "^1.2.1",
     "jquery": "^3.2.1",
     "parsleyjs": "^2.8.0",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-grid-gallery": "^0.4.7",
-    "react-timeago": "^3.4.3",
-    "react_ujs": "^2.4.4"
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-silentbox": "^0.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "vue-timeago": "^3.4.4",
+    "vue-turbolinks": "^2.0.1"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.1.0"
+    "webpack-dev-server": "^2.11.1"
   }
 }
