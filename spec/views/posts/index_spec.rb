@@ -9,7 +9,6 @@ describe 'posts/index' do
   it 'renders a list of posts' do
     render
 
-    assert_select 'tr > td strong', text: 'Foo', count: 2
-    assert_select 'tr > td span', text: 'Lorem ipsum', count: 2
+    assert_select 'post-listing', count: 1
   end
 end

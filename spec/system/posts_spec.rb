@@ -56,7 +56,7 @@ describe 'Post management' do
       visit post_path(example_post)
 
       expect(page).to have_selector('h1', text: 'Example')
-      expect(page).to have_selector('time', text: 'ago')
+      expect(page).to have_selector('time', text: 'just now')
       expect(page).to have_link(href: edit_post_path(example_post))
       expect(page).to have_link(href: post_path(example_post, format: 'pdf'))
     end

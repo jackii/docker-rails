@@ -11,7 +11,7 @@ describe 'posts/new' do
     assert_select 'form[action=?][method=?]', posts_path, 'post' do
       assert_select 'input[name=?]', 'post[title]'
       assert_select 'input[name=?]', 'post[content]'
-      assert_select 'trix-editor[input=?]', 'post_content'
+      assert_select 'trix-vue[input-id=?]', 'post_content'
     end
   end
 end
