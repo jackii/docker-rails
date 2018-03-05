@@ -5,6 +5,7 @@ import Vue from 'vue';
 import TurbolinksAdapter from 'vue-turbolinks';
 import VueTimeago from 'vue-timeago';
 import VueSilentbox from 'vue-silentbox';
+import { TrixVue } from 'trix-vue2';
 
 Vue.use(TurbolinksAdapter);
 Vue.use(VueTimeago, {
@@ -16,10 +17,11 @@ Vue.use(VueTimeago, {
 });
 Vue.use(VueSilentbox);
 
-Vue.config.ignoredElements = ['trix-editor'];
-
 document.addEventListener('turbolinks:load', () => {
   new Vue({
     el: '#main',
+    components: {
+      TrixVue,
+    }
   });
 });

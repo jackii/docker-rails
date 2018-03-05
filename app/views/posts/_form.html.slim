@@ -15,7 +15,7 @@
     .tab-content
       #text-tab.tab-pane.active role="tabpanel"
         = f.input :content, as: :hidden
-        trix-editor input="post_content" placeholder="Content" id="trix-post-content"
+        trix-vue input-id="post_content" id="trix-post-content"
 
       #clips-tab.tab-pane role="tabpanel"
         .fileinput-button.mt-3
@@ -38,7 +38,7 @@
 
       #copyright-tab.tab-pane role="tabpanel"
         = f.input :copyright, as: :hidden
-        trix-editor input="post_copyright" placeholder="Copyright" id="trix-post-copyright"
+        trix-vue input-id="post_copyright" id="trix-post-copyright"
 
   .form-actions
     = f.button :submit, class: 'btn-primary'

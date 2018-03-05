@@ -57,7 +57,6 @@ gem 'ahoy_matey', '~> 2'
 gem 'blazer'
 gem 'friendly_id'
 gem 'stringex'
-gem 'trix'
 gem 'rollbar'
 gem 'punchbox'
 
