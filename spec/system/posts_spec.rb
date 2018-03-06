@@ -34,11 +34,11 @@ describe 'Post management' do
     scenario 'searches for a post with autocompletion', js: true do
       visit posts_path
 
-      within '#search' do
-        fill_in 'q', with: 'Exa'
-        expect(page).to have_selector('.tt-suggestion', text: 'example')
+      within '#autocomplete' do
+        fill_in 'search', with: 'Exa'
+        expect(page).to have_css('li', text: 'example')
 
-        fill_in 'q', with: "Exam\n"
+        fill_in 'search', with: "Exam\n"
       end
 
       expect(page).to have_current_path(/q=Exam/)

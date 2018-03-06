@@ -7,6 +7,7 @@
                v-model="value"
                placeholder="Search ..."
                type="google"
+               id="autocomplete"
                @input="changed"
                @enter="enter">
   </vue-instant>
