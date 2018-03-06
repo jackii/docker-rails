@@ -2,6 +2,10 @@ html, body {
   height: 100%;
 }
 
+[v-cloak] {
+  display: none
+}
+
 #main {
   margin-top: 80px;
   margin-bottom: 30px;

@@ -21,9 +21,15 @@ Vue.use(VueSilentbox);
 
 document.addEventListener('turbolinks:load', () => {
   new Vue({
-    el: '#main',
+    el: '#app',
     components: {
       TrixVue, PostListing, Autocomplete
+    },
+
+    data: function() {
+      return {
+        vueVersion: Vue.version
+      };
     }
   });
 });

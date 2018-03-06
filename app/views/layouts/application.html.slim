@@ -13,16 +13,17 @@ html[lang="en"]
     = javascript_pack_tag    'application'
 
   body data-punchbox-controller=controller_path data-punchbox-action=action_name
-    = render 'layouts/navbar'
+    #app
+      = render 'layouts/navbar'
 
-    #main
-      .container
-        - if alert
-          p.alert.alert-danger
-            = alert
-        - if notice
-          p.alert.alert-info
-            = notice
-        = yield
+      #main[v-cloak]
+        .container
+          - if alert
+            p.alert.alert-danger
+              = alert
+          - if notice
+            p.alert.alert-info
+              = notice
+          = yield
 
-    = render 'layouts/footer'
+      = render 'layouts/footer'
