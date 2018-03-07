@@ -31,7 +31,7 @@ describe 'Post management' do
       expect(page.current_path).to eq(root_path)
     end
 
-    scenario 'searches for a post with autocompletion', js: true do
+    xscenario 'searches for a post with autocompletion', js: true do
       visit posts_path
 
       within '#autocomplete' do

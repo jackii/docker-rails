@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "Visitor signs up" do
-  scenario "by navigating to the page" do
+  scenario "by navigating to the page", js: true do
     visit sign_in_path
 
     within '.navbar' do
