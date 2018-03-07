@@ -7,14 +7,14 @@
       </thead>
 
       <tbody>
-        <tr v-for="post in posts" :data-href="'/posts/' + post.slug">
-          <td class="js-row-link">
+        <tr v-for="post in posts">
+          <td @click="clickRow(post)">
             <i v-if="post.clips_count > 0" class="fas fa-image"/>
             <strong v-html="post.title"></strong>
             <span v-html="post.content"></span>
           </td>
 
-          <td class="js-row-link text-right d-none d-md-table-cell text-nowrap">
+          <td class="text-right d-none d-md-table-cell text-nowrap" @click="clickRow(post)">
             <timeago class="badge badge-secondary" :since="post.updated_at" />
           </td>
         </tr>
@@ -44,8 +44,8 @@ export default {
   },
 
   methods: {
-    saveForm() {
-      axios.post('/posts')
+    clickRow(post) {
+      Turbolinks.visit('/posts/' + post.slug)
     },
 
     loadNextPage () {
@@ -81,3 +81,12 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+  td
+    cursor: pointer
+
+    em
+      font-weight: bold
+      font-style: normal
+</style>
