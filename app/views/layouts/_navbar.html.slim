@@ -1,67 +1,55 @@
 - cache [ 'navbar', I18n.locale, current_user ] do
-  nav.navbar.fixed-top.navbar-expand-md.navbar-dark.bg-dark
-    .container
-      a.navbar-brand href=root_path
+  b-navbar[toggleable="md" type="dark" variant="dark" fixed="top" v-cloak]
+    b-container
+      b-navbar-brand href=root_path
         | DockerRails
 
-      button.navbar-toggler {
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label=("Toggle navigation")
-        data-target="#navbarSupportedContent"
-        data-toggle="collapse"
-        type="button"
-      }
-        span.navbar-toggler-icon
+      b-navbar-toggle target="navbarSupportedContent"
 
-      #navbarSupportedContent.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
+      b-collapse#navbarSupportedContent is-nav=""
+        b-navbar-nav.mr-auto
 
-        - if signed_in?
-          = link_to new_post_path, \
-              class: 'btn btn-primary btn-sm mr-2',
-              id: 'add-new-post',
-              title: 'Add new Post',
-              data: { toggle: 'tooltip', placement: 'bottom' } do
-            i.fa.fa-plus
+        b-navbar-nav
+          - if signed_in?
+            = link_to new_post_path, \
+                class: 'btn btn-primary btn-sm mr-2',
+                id: 'add-new-post',
+                title: 'Add new Post',
+                'v-b-tooltip.bottom': true do
+              i.fa.fa-plus
 
-          - if current_user.is_admin?
-            = link_to sidekiq_web_path, \
+            - if current_user.is_admin?
+              = link_to sidekiq_web_path, \
+                  class: 'btn btn-light btn-sm mr-2',
+                  title: 'Sidekiq',
+                  data: { turbolinks: 'false' },
+                  'v-b-tooltip.bottom': true do
+                i.fa.fa-cogs
+
+              = link_to blazer_path, \
+                  class: 'btn btn-light btn-sm mr-2',
+                  title: 'Blazer',
+                  data: { turbolinks: 'false' },
+                  'v-b-tooltip.bottom': true do
+                i.fa.fa-binoculars
+
+            = link_to sign_out_path, \
                 class: 'btn btn-light btn-sm mr-2',
-                title: 'Sidekiq',
-                data: { turbolinks: 'false', toggle: 'tooltip', placement: 'bottom' } do
-              i.fa.fa-cogs
-
-            = link_to blazer_path, \
-                class: 'btn btn-light btn-sm mr-2',
-                title: 'Blazer',
-                data: { turbolinks: 'false', toggle: 'tooltip', placement: 'bottom' } do
-              i.fa.fa-binoculars
-
-          .nav-item.dropdown
-            a.btn.btn-light.btn-sm.dropdown-toggle {
-              aria-expanded="false"
-              aria-haspopup="true"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-            }
-              i.fa.fa-user-circle
-              '
+                title: I18n.t('layouts.application.sign_out'),
+                data: { turbolinks: 'false' },
+                'v-b-tooltip.bottom': true,
+                method: :delete do
               = current_user.email
               '
-              span.caret
-            .dropdown-menu
-              = link_to sign_out_path, class: 'dropdown-item', method: :delete do
-                = I18n.t('layouts.application.sign_out')
+              i.fa.fa-sign-out-alt
 
-        - else
-          = link_to sign_up_path, class: 'btn btn-light btn-sm mr-2' do
-            i.fa.fa-user-plus
-            '
-            = I18n.t("layouts.application.sign_up")
+          - else
+            = link_to sign_up_path, class: 'btn btn-light btn-sm mr-2' do
+              i.fa.fa-user-plus
+              '
+              = I18n.t("layouts.application.sign_up")
 
-          = link_to sign_in_path, class: 'btn btn-light btn-sm' do
-            i.fa.fa-user-circle
-            '
-            = I18n.t("layouts.application.sign_in")
+            = link_to sign_in_path, class: 'btn btn-light btn-sm' do
+              i.fa.fa-user-circle
+              '
+              = I18n.t("layouts.application.sign_in")

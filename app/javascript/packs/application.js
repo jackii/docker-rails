@@ -3,13 +3,18 @@ console.log('Hello World from Webpacker');
 
 import Vue from 'vue';
 import TurbolinksAdapter from 'vue-turbolinks';
+import BootstrapVue from 'bootstrap-vue';
 import VueTimeago from 'vue-timeago';
 import VueSilentbox from 'vue-silentbox';
 import { TrixVue } from 'trix-vue2';
 import PostListing from 'components/PostListing';
 import Autocomplete from 'components/Autocomplete';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+
 Vue.use(TurbolinksAdapter);
+Vue.use(BootstrapVue);
 Vue.use(VueTimeago, {
   name: 'timeago',
   locale: 'en-US',

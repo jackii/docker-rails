@@ -4,22 +4,14 @@
   .form-inputs
     = f.input :title, placeholder: 'Title', label: false
 
-    ul.nav.nav-tabs role="tablist"
-      li.nav-item
-        a.nav-link.active data-toggle="tab" href="#text-tab" role="tab"  Text
-      li.nav-item
-        a.nav-link data-toggle="tab" href="#clips-tab" role="tab"  Images
-      li.nav-item
-        a.nav-link data-toggle="tab" href="#copyright-tab" role="tab"  Copyright
-
-    .tab-content
-      #text-tab.tab-pane.active role="tabpanel"
+    b-tabs :no-fade='true'
+      b-tab[title='Text' active]
         = f.input :content, as: :hidden
-        trix-vue input-id="post_content" id="trix-post-content"
+        trix-vue input-id='post_content' id='trix-post-content'
 
-      #clips-tab.tab-pane role="tabpanel"
+      b-tab[title='Images']
         .fileinput-button.mt-3
-          input multiple="multiple" type="file"
+          input multiple='multiple' type='file'
           .message Drop files here or click to upload
 
           .row.no-gutters#js-images
@@ -32,13 +24,13 @@
           .col-2
             .mb-2.mr-2
               img
-              input type="hidden" name="post[clips_attributes][][image]"
+              input type='hidden' name='post[clips_attributes][][image]'
               .progress
-                .progress-bar role="progressbar" style="height: 2px"
+                .progress-bar role='progressbar' style='height: 2px'
 
-      #copyright-tab.tab-pane role="tabpanel"
+      b-tab[title='Copyright']
         = f.input :copyright, as: :hidden
-        trix-vue input-id="post_copyright" id="trix-post-copyright"
+        trix-vue input-id='post_copyright' id='trix-post-copyright'
 
   .form-actions
     = f.button :submit, class: 'btn-primary'

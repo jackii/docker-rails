@@ -12,8 +12,6 @@
 //
 //= require jquery/dist/jquery.js
 //= require ahoy
-//= require popper
-//= require bootstrap-sprockets
 //= require blueimp-file-upload/js/vendor/jquery.ui.widget
 //= require blueimp-file-upload/js/jquery.iframe-transport
 //= require blueimp-file-upload/js/jquery.fileupload
@@ -26,7 +24,6 @@
 //= require_tree .
 
 document.addEventListener('turbolinks:load', function() {
-  new TooltipEnabler();
   new AhoyTracker();
   new PiwikAnalytics();
 });

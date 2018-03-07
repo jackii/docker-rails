@@ -57,8 +57,6 @@ GEM
       user_agent_parser
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (8.1.0.1)
-      execjs
     aws-partitions (1.70.0)
     aws-sdk-core (3.17.0)
       aws-partitions (~> 1.0)
@@ -81,10 +79,6 @@ GEM
       safely_block (>= 0.1.1)
     bootsnap (1.2.0)
       msgpack (~> 1.0)
-    bootstrap (4.0.0)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
     browser (2.5.3)
     builder (3.2.3)
     byebug (10.0.0)
@@ -217,7 +211,6 @@ GEM
       ruby-rc4
       ttfunk
     pg (1.0.0)
-    popper_js (1.12.9)
     powerpack (0.1.1)
     premailer (1.11.1)
       addressable
@@ -408,7 +401,6 @@ DEPENDENCIES
   aws-sdk-s3
   blazer
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4)
   byebug
   capybara (~> 2.15)
   clearance

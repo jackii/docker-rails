@@ -1,3 +1,10 @@
+// Hack: copied from bootstrap
+$gray-200: #e9ecef;
+$gray-400: #ced4da;
+$gray-700: #495057;
+$border-radius: .25rem;
+$small-font-size: 80%;
+
 html, body {
   height: 100%;
 }
@@ -39,7 +46,7 @@ footer {
   }
 }
 
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
   #main {
     margin-bottom: 180px;
   }
