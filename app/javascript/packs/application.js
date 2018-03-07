@@ -10,9 +10,6 @@ import { TrixVue } from 'trix-vue2';
 import PostListing from 'components/PostListing';
 import Autocomplete from 'components/Autocomplete';
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
-
 Vue.use(TurbolinksAdapter);
 Vue.use(BootstrapVue);
 Vue.use(VueTimeago, {
