@@ -166,10 +166,10 @@ describe 'Post management' do
 
       click_on 'Create Post'
 
-      expect(page).to have_selector('.post_title.has-danger')
+      expect(page.find('#post_title').native.attribute('validationMessage')).to eq('Please fill out this field.')
 
       fill_in 'post[title]', with: 'Foo'
-      expect(page).to_not have_selector('.post_title.has-danger')
+      expect(page.find('#post_title').native.attribute('validationMessage')).to eq('')
 
       all(:css, "trix-editor").first.click.set('dolor sit amet')
       click_on 'Create Post'

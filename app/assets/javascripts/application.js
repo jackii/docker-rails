@@ -12,7 +12,6 @@
 //
 //= require jquery/dist/jquery.js
 //= require ahoy
-//= require parsleyjs
 //= require popper
 //= require bootstrap-sprockets
 //= require blueimp-file-upload/js/vendor/jquery.ui.widget
