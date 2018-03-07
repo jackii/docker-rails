@@ -35,10 +35,10 @@ class @PiwikAnalytics
     window._paq.push ['trackPageView']
 
   piwikId: ->
-    $("meta[name='piwik-id']").attr('content')
+    (document.head.querySelector("meta[name=piwik-id]") || {}).content
 
   piwikHost: ->
-    $("meta[name='piwik-host']").attr('content')
+    (document.head.querySelector("meta[name=piwik-host]") || {}).content
 
   piwikUrl: ->
     '//' + @piwikHost() + '/js/'

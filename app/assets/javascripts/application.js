@@ -25,7 +25,7 @@
 //= require punchbox
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
+document.addEventListener('turbolinks:load', function() {
   new TooltipEnabler();
   new AhoyTracker();
   new PiwikAnalytics();

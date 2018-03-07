@@ -1,5 +1,6 @@
-$(document).on 'turbolinks:load', ->
-  post_id = $('article').data('cable-post-id')
+document.addEventListener 'turbolinks:load', ->
+  article = document.querySelectorAll('article')[0]
+  post_id = article.dataset.cablePostId if article
 
   if post_id
     App.updates = App.cable.subscriptions.create { channel: "PostUpdateChannel", post_id: post_id },
