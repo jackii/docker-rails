@@ -28,15 +28,13 @@ RSpec.configure do |config|
   end
 
   config.after :each, type: :system, js: true do
-    ALLOWED_ERROR = "This page includes a password or credit card input in a non-secure context"
+    ALLOWED_ERROR = 'This page includes a password or credit card input in a non-secure context'.freeze
 
     errors = page.driver.browser.manage.logs.get(:browser)
     if errors.present?
       message = errors.map(&:message).join("\n")
 
-      unless message.include?(ALLOWED_ERROR)
-        raise message
-      end
+      raise message unless message.include?(ALLOWED_ERROR)
     end
 
     Capybara.reset_sessions!

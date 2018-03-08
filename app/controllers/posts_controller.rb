@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def autocomplete
-    render json: Post.autocomplete(search_string).map { |v| { value: v }}
+    render json: Post.autocomplete(search_string).map { |v| { value: v } }
   end
 
   def show
