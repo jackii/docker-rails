@@ -1,7 +1,7 @@
 - cache [ 'navbar', I18n.locale, current_user ] do
   b-navbar[toggleable="md" type="dark" variant="dark" fixed="top" v-cloak]
     b-container
-      b-navbar-brand href=root_path
+      b-navbar-brand href=root_path :target="null"
         | DockerRails
 
       b-navbar-toggle target="navbarSupportedContent"
