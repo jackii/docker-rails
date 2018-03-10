@@ -84,12 +84,6 @@ services:
     depends_on:
       - app
 
-  selenium:
-    image: selenium/standalone-chrome
-    ports:
-      - "4444:4444"
-      - "5900:5900"
-
   test:
     <<: *app_base
     environment:
@@ -97,7 +91,6 @@ services:
       - REDIS_SIDEKIQ_URL=redis://redis:6379/0
       - REDIS_CABLE_URL=redis://redis:6379/1
       - MEMCACHED_HOST=memcached
-      - SELENIUM_REMOTE_HOST=selenium
       - RAILS_ENV=test
       - RAILS_MAX_THREADS
       - SECRET_KEY_BASE
@@ -121,8 +114,6 @@ services:
       - AWS_SECRET_ACCESS_KEY
       - AWS_BUCKET
       - AWS_REGION
-    depends_on:
-      - selenium
 
 volumes:
   db-data:

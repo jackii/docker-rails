@@ -4,16 +4,11 @@ engines:
     enabled: true
   bundler-audit:
     enabled: true
-  coffeelint:
-    enabled: true
   duplication:
     enabled: true
     config:
       languages:
       - ruby
-      - javascript
-  eslint:
-    enabled: true
   fixme:
     enabled: true
   rubocop:
@@ -26,8 +21,6 @@ ratings:
   - "**.rb"
   - "**.rhtml"
   - "**.slim"
-  - "**.coffee"
-  - "**.js"
 exclude_paths:
 - config/
 - db/

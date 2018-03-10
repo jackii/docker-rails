@@ -14,21 +14,17 @@ Simple Rails 5.2 application to demonstrate using Docker for production deployme
 
 - Auto refresh via [ActionCable](https://github.com/rails/rails/tree/master/actioncable): If a displayed post gets changed by another user/instance, it refreshes automatically using the publish/subscribe pattern
 - Full text search via [Elasticsearch](https://www.elastic.co/products/elasticsearch) and the [Searchkick](https://github.com/ankane/searchkick) gem to find post content (with suggestions)
-- Autocompletion with [corejs-typeahead](https://github.com/corejavascript/typeahead.js)
 - PDF export with [wkhtmltopdf](http://wkhtmltopdf.org/) and the [WickedPDF](https://github.com/mileszs/wicked_pdf) gem
 - Editing HTML content with the WYSIWYG JavaScript editor [Trix](https://github.com/basecamp/trix)
 - Uploading images directly to S3 with the [Shrine](https://github.com/janko-m/shrine) gem and [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload)
-- Display images as Gallery with the [React Grid Gallery](https://github.com/benhowell/react-grid-gallery)
 - Background jobs with [ActiveJob](https://github.com/rails/rails/tree/master/activejob) and the [Sidekiq](http://sidekiq.org/) gem (to handle full text indexing, image processing and ActionCable broadcasting)
 - Cron scheduling with [Sidekiq-Cron](https://github.com/ondrejbartas/sidekiq-cron) to handle daily data updates from Wikipedia
 - Permalinks using the [FriendlyId](https://github.com/norman/friendly_id) gem
-- Infinitive scrolling (using the [Kaminari](https://github.com/kaminari/kaminari) gem and some JavaScript)
+- Infinitive scrolling (using the [Kaminari](https://github.com/kaminari/kaminari) gem)
 - User authentication with the [Clearance](https://github.com/thoughtbot/clearance/) gem
 - Sending HTML e-mails with [Premailer](https://github.com/fphilipe/premailer-rails) and the [Really Simple Responsive HTML Email Template](https://github.com/leemunroe/responsive-html-email-template)
 - User visit and click tracking with [Ahoy](https://github.com/ankane/ahoy) gem
 - Admin dashboards with [Blazer](https://github.com/ankane/blazer) gem
-- Page specific JavaScript with [Punchbox](https://github.com/kieraneglin/punchbox)
-- Bundle JavaScript libraries with [Yarn](https://yarnpkg.com)
 
 
 ## Why?
@@ -48,10 +44,9 @@ The application is divided into 7 different containers:
 - **redis:** In-memory key/value store (used by Sidekiq and ActionCable)
 - **backup:** Regularly backups the database as a dump via CRON to an Amazon S3 bucket
 
-For running tests using RSpec, there are two additional containers:
+For running tests using RSpec, there is an additional container:
 
 - **test:** Application code prepared for running tests
-- **selenium:** Standalone Chrome for executing system tests containing JavaScript
 
 
 ## Check it out!

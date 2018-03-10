@@ -57,8 +57,6 @@ GEM
       user_agent_parser
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (8.1.0.1)
-      execjs
     aws-partitions (1.70.0)
     aws-sdk-core (3.17.0)
       aws-partitions (~> 1.0)
@@ -72,10 +70,6 @@ GEM
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.2)
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
     blazer (1.8.2)
@@ -85,34 +79,14 @@ GEM
       safely_block (>= 0.1.1)
     bootsnap (1.2.0)
       msgpack (~> 1.0)
-    bootstrap (4.0.0)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
     browser (2.5.3)
     builder (3.2.3)
     byebug (10.0.0)
-    capybara (2.18.0)
-      addressable
-      mini_mime (>= 0.1.3)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (>= 2.0, < 4.0)
     chartkick (2.3.2)
-    childprocess (0.8.0)
-      ffi (~> 1.0, >= 1.0.11)
     clearance (1.16.1)
       bcrypt
       email_validator (~> 1.4)
       rails (>= 3.1)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     crass (1.0.3)
@@ -144,7 +118,6 @@ GEM
     erubi (1.7.1)
     et-orbi (1.0.9)
       tzinfo
-    execjs (2.7.0)
     factory_bot (4.8.2)
       activesupport (>= 3.0.0)
     factory_bot_rails (4.8.2)
@@ -152,9 +125,6 @@ GEM
       railties (>= 3.0.0)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.23)
-    font-awesome-sass (5.0.6.2)
-      sass (>= 3.2)
     foreman (0.84.0)
       thor (~> 0.19.1)
     friendly_id (5.2.3)
@@ -221,7 +191,6 @@ GEM
       ruby-rc4
       ttfunk
     pg (1.0.0)
-    popper_js (1.12.9)
     powerpack (0.1.1)
     premailer (1.11.1)
       addressable
@@ -232,14 +201,10 @@ GEM
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (3.0.2)
     puma (3.11.3)
-    punchbox (1.0.3)
-      rails (>= 4.0.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.4)
     rack-protection (2.0.1)
-      rack
-    rack-proxy (0.6.4)
       rack
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
@@ -269,15 +234,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
     rake (12.3.0)
-    rb-fsevent (0.10.3)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
-    react-rails (2.4.4)
-      babel-transpiler (>= 0.7.0)
-      connection_pool
-      execjs
-      railties (>= 3.2)
-      tilt
     redis (4.0.1)
     referer-parser (0.3.0)
     request_store (1.4.0)
@@ -313,29 +269,14 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
     ruby-rc4 (0.1.5)
-    rubyzip (1.2.1)
     rufus-scheduler (3.4.2)
       et-orbi (~> 1.0)
     safely_block (0.2.1)
       errbase
-    sass (3.5.5)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    sass-rails (5.0.7)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
     searchkick (3.0.0)
       activemodel (>= 4.2)
       elasticsearch (>= 5)
       hashie
-    selenium-webdriver (3.10.0)
-      childprocess (~> 0.5)
-      rubyzip (~> 1.2)
     shrine (2.9.0)
       down (~> 4.1)
     shrine-memory (0.3.0)
@@ -348,9 +289,6 @@ GEM
     sidekiq-cron (0.6.3)
       rufus-scheduler (>= 3.3.0)
       sidekiq (>= 4.2.1)
-    simple_form (3.5.1)
-      actionpack (> 4, < 5.2)
-      activemodel (> 4, < 5.2)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -358,13 +296,6 @@ GEM
     simplecov-html (0.10.2)
     skylight (1.5.1)
       activesupport (>= 3.0.0)
-    slim (3.0.9)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 1.3.3, < 2.1)
-    slim-rails (3.1.3)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      slim (~> 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -376,24 +307,12 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sprockets_uglifier_with_source_maps (2.1.0)
-      sprockets-rails (~> 3.0)
-      uglifier (>= 2.5)
     stringex (2.8.3)
-    temple (0.8.0)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.8)
-    trix (0.11.1)
-      rails (> 4.1, < 5.2)
     ttfunk (1.5.1)
-    turbolinks (5.1.0)
-      turbolinks-source (~> 5.1)
-    turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.6)
-      execjs (>= 0.3.0, < 3)
     unicode-display_width (1.3.0)
     user_agent_parser (2.4.1)
     web-console (3.5.1)
@@ -401,16 +320,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webpacker (3.3.0)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
     wicked_pdf (1.1.0)
-    xpath (3.0.0)
-      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
@@ -420,16 +333,12 @@ DEPENDENCIES
   aws-sdk-s3
   blazer
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4)
   byebug
-  capybara (~> 2.15)
   clearance
-  coffee-rails (~> 4.2)
   dalli
   dotenv-rails
   email_spec
   factory_bot_rails
-  font-awesome-sass
   foreman
   friendly_id
   image_processing
@@ -443,36 +352,26 @@ DEPENDENCIES
   pg (~> 1.0)
   premailer-rails
   puma (~> 3.11)
-  punchbox
   pundit
   rack
   rails (~> 5.2.0.rc1)
-  react-rails
   redis (~> 4.0)
   responders
   rollbar
   rspec-rails
   rubocop
-  sass-rails (~> 5.0)
   searchkick
-  selenium-webdriver
   shrine
   shrine-memory
   sidekiq
   sidekiq-cron
-  simple_form
   simplecov
   skylight
-  slim-rails
   spring
   spring-commands-rspec
-  sprockets_uglifier_with_source_maps
   stringex
-  trix
-  turbolinks (~> 5)
   tzinfo-data
   web-console
-  webpacker
   wicked_pdf
 
 BUNDLED WITH
